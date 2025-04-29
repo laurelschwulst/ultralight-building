@@ -24,7 +24,9 @@
       article h2 {
         margin-top: 2em;
       }
-      details summary {
+      details summary,
+      .class-title,
+      a.button {
         display: inline-block;
         padding: 4px 8px;
         border-radius: 4px;
@@ -32,6 +34,25 @@
         cursor: pointer;
         background: rgba(0, 0, 0, 0.1);
         margin-bottom: 1em;
+      }
+      details[open] summary {
+        background: transparent;
+        border: 1px solid black;
+      }
+      section#grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+        background: transparent;
+      }
+      .class-about {
+        /* text-align: left; border: 15px solid rgba(0, 0, 0, 0.05); padding: 1em; */
+      }
+      .class-buttons {
+        text-align: center;
+      }
+      section#grid a.button {
+        text-decoration: none;
+        display: inline-block;
       }
     </style>
   </head>
@@ -63,14 +84,41 @@
       >
         SUMMER 2025<br /><br /><br />
         <u>Classes</u><br /><br />
-        <details>
-          <summary>TWA: Total Work of Art</summary>
-          <figure style="max-width: 800px; margin: 0 auto">
-            <img src="assets/images/twa.svg" /><br /><br />
-          </figure>
-        </details>
-        <details><summary>Sense-to-Sense</summary></details>
-        <details><summary>Walking the Internet</summary></details>
+        <section id="grid">
+            <div class="class">
+                <details open>
+                    <summary>TWA: Total Work of Art</summary>
+                
+                <div class="class-about">
+                    ( exploring digital, physical, & temporal forms )<br><br>
+                    <figure style="max-width: 800px; margin: 0 auto">
+                        <img src="assets/images/twa.svg" /><br /><br />
+                      </figure>
+                      ( 7 Weeks: June 15, June 20, June 22, June 27, June 28, July 6, July 11, July 13, July 18, July 20, July 25, July 27, August 1, August 3 )   •   NYC<br><br>
+
+                      <div class="class-buttons">
+                        <a href="classes/twa.html" class="button">More info</a>
+                        <a href="#" class="button">Application coming soon</a>
+                    </div>
+                </div>
+            </details>
+                
+            </div>
+            <div class="class">
+                <div class="class-title">
+                    Sense-to-Sense
+                </div>
+                <div class="class-about">
+                </div>
+            </div>
+            <div class="class">
+                <div class="class-title">
+                    Walking the Internet
+                </div>
+                <div class="class-about">
+                </div>
+            </div>
+        </section>
         ( All classes take place in-person in New York City )
         <br /><br /><br />
         <u>Calendar</u>
