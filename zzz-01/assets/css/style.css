@@ -1,0 +1,415 @@
+@font-face {
+  font-family: "Waxwing";
+  src: url("../fonts/waxwing.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Normalschrift";
+  src: url("../fonts/normalschrift.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-size: 28px; */
+  /* color: #545454; */
+  font-weight: bold;
+  background-color: lemonchiffon;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  border: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid black;
+}
+
+figure {
+  margin: 0;
+}
+
+figure.medium {
+  max-width: 500px;
+}
+
+.waxwing {
+  font-family: "Waxwing", monospace;
+  font-weight: normal !important;
+  font-size: 14px !important;
+}
+
+.cursive {
+  font-family: "Normalschrift", cursive !important;
+  font-weight: normal !important;
+  font-size: 32px !important;
+  line-height: 1.4 !important;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  margin: 2.25em;
+}
+
+iframe {
+  height: calc(100vh - (40px + 6em));
+}
+
+iframe,
+img {
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%);
+}
+
+img.color {
+  filter: grayscale(0%);
+}
+
+nav#top {
+  /* background: #f6f1c6; */
+  background-color: lemonchiffon;
+  height: 32px;
+  margin-top: -1px;
+  border-top: 1px solid #e5e1b8;
+  border-bottom: 1px solid #e5e1b8;
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-family: "Lucida Grande"; */
+  font-size: 14px;
+}
+
+nav#top a {
+  display: inline-block;
+  margin: 0 1em;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.half-circle {
+  width: 800px;
+  height: 400px;
+  margin: 1em auto;
+  border: 1px solid black;
+  border-bottom: 0;
+  border-top-left-radius: 800px;
+  border-top-right-radius: 800px;
+}
+
+body#letters {
+  margin: 0;
+  padding: 0;
+}
+
+nav#home {
+  padding: 20px;
+  padding-left: 18px;
+  font-family: "Waxwing", monospace;
+  font-weight: normal !important;
+  font-size: 14px !important;
+  border-bottom: 1px solid black;
+  /* text-align: center; */
+}
+
+nav#home a {
+  text-decoration: none;
+  color: black;
+}
+
+nav#home a:hover {
+  text-decoration: underline;
+}
+
+/* nav#home a.home-link:hover {
+  text-decoration: none;
+} */
+
+nav#buttons {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+nav#buttons a {
+  display: inline-block;
+  height: 1.75em;
+  width: 1.75em;
+  border-radius: 50%;
+  background: black;
+}
+
+body#letters h1 {
+  font-family: "Times New Roman", serif;
+  font-weight: normal;
+  /* font-style: italic; */
+  font-size: 8em;
+  margin: 0.5em 0;
+}
+
+section#letters {
+  margin: 20px;
+  margin-top: 10px;
+}
+
+section#letters article {
+  font-size: 4em;
+}
+
+article p:first-of-type {
+  margin-top: 0;
+}
+
+section#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1px;
+  background-color: black;
+  margin: 0;
+}
+
+section#grid .item {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  color: black;
+  background-color: lemonchiffon;
+  padding: 1em;
+  position: relative;
+}
+
+section#grid .item.cover {
+  padding: 0;
+}
+
+section#grid .item.cover img.background {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+section#grid .item .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+}
+
+section#grid .item img {
+  max-height: calc(20vw - 2em - 5px);
+}
+
+section#grid a {
+  display: block;
+  color: black;
+}
+
+section#grid a:hover,
+section#grid a:hover span.label {
+  text-decoration: underline;
+}
+
+section#grid .label {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+}
+
+section#grid date {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  /* display: inline-block;
+  margin-left: 0.5em; */
+  opacity: 0.5;
+}
+
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+ul.menu li {
+  display: inline-block;
+  margin: 0 0.5em;
+  padding: 0;
+}
+
+ul.menu li:last-of-type {
+  margin: 0;
+}
+
+ul.menu li a:hover {
+  text-decoration: none !important;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+ul.menu a {
+  display: inline-block;
+  padding: 1px 3px;
+  border-radius: 5px;
+}
+
+ul.menu li a.current {
+  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.1);
+  /* color: lemonchiffon !important; */
+}
+
+ul.menu li a.toggle {
+  /* height: 1em;
+  width: 1em;
+  border: 1px solid black;
+  border-radius: 50%; */
+}
+
+section#letter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1px;
+  background-color: black;
+  margin: 0;
+}
+
+section#letter article {
+  color: black;
+  background-color: lemonchiffon;
+  padding: 1em;
+  grid-column: 2 / span 4;
+}
+
+section#letter aside {
+  /* aspect-ratio: 1 / 1; */
+  min-height: calc(100vh - (40px + 1.25em));
+  width: 100%;
+  color: black;
+  background-color: lemonchiffon;
+  padding: 1em;
+  position: relative;
+}
+
+section#letter h1 {
+  font-size: 4em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-align: left;
+}
+
+section#letter h2 {
+  font-size: 2em;
+  margin-top: 2em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-align: left;
+}
+
+section#letter p {
+  font-size: 2em;
+  font-family: "Waxwing";
+  font-weight: normal !important;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* PROGRAMS */
+
+section#program h1 {
+  font-size: 4em;
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+section#program h2.subtitle {
+  margin-top: 0;
+}
+
+section#program h2 {
+  margin-top: 2em;
+}
+
+section#program p,
+section#program ul.keywords {
+  font-size: 1.5em;
+}
+
+table.workshop {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 5em 0;
+  font-family: "Waxwing", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+table.workshop tr,
+td {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid black;
+  border-radius: 0;
+  padding: 0.6em 0.65em 0.5em;
+}
+
+table.workshop td {
+}
+
+/* FOOTER */
+
+footer {
+  /* border-top: 1px solid black;
+  height: 20vw; */
+}
+
+/* META */
+
+date {
+  font-family: "Waxwing", monospace;
+  font-weight: normal !important;
+  font-size: 14px !important;
+}
+
+.commentary {
+  background: rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  padding: 1px 3px;
+  border-radius: 5px;
+  font-family: "Waxwing", monospace;
+  font-weight: normal !important;
+  font-size: 14px !important;
+}
