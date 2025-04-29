@@ -34,6 +34,15 @@
         cursor: pointer;
         background: rgba(0, 0, 0, 0.1);
         margin-bottom: 1em;
+        border: 1px solid transparent;
+      }
+      section#grid a.button {
+        border: 1px solid black;
+      }
+      section#grid a.button.inactive {
+        background: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        color: rgba(0, 0, 0, 0.6);
       }
       details[open] summary {
         background: transparent;
@@ -53,6 +62,7 @@
       section#grid a.button {
         text-decoration: none;
         display: inline-block;
+        margin: 0 0.25em;
       }
     </style>
   </head>
@@ -83,7 +93,7 @@
         "
       >
         SUMMER 2025<br /><br /><br />
-        <u>Classes</u><br /><br />
+        <u>Classes</u><br /><br /><br />
         <section id="grid">
             <div class="class">
                 <details open>
@@ -95,10 +105,11 @@
                         <img src="assets/images/twa.svg" /><br /><br />
                       </figure>
                       ( 7 Weeks: June 15, June 20, June 22, June 27, June 28, July 6, July 11, July 13, July 18, July 20, July 25, July 27, August 1, August 3 )   •   NYC<br><br>
+                      ( By Stephen Kwok, Laurel Schwulst, & Bryant Wells )<br><br>
 
                       <div class="class-buttons">
                         <a href="classes/twa.html" class="button">More info</a>
-                        <a href="#" class="button">Application coming soon</a>
+                        <a href="#" class="button inactive">Application coming soon</a>
                     </div>
                 </div>
             </details>
@@ -119,9 +130,12 @@
                 </div>
             </div>
         </section>
+        <br /><br />
         ( All classes take place in-person in New York City )
         <br /><br /><br />
+        <br /><br /><br />
         <u>Calendar</u>
+        <br /><br />
       </div>
       <iframe
         src="https://calendar.google.com/calendar/embed?src=896c39aa11bf441af4d932c1b02aed654ae7dc45b7ef58353e166b92fc295177%40group.calendar.google.com&ctz=America%2FNew_York"
@@ -133,7 +147,7 @@
       ></iframe>
       <article>
         <div style="text-align: center">
-          <u>FAQ</u><br /><br />
+          <u>FAQ</u><br /><br /><br>
           <details>
             <summary>What is ultralight?</summary>
             <div style="text-align: left">
@@ -158,7 +172,6 @@
           <details>
             <summary>What is ultralight school?</summary>
             <div style="text-align: left">
-              <p>Ultralight is a word that means extremely lightweight.</p>
               <p>It’s a new educational umbrella project.</p>
               <p>
                 Ultralight School is an evolution of our previous Fruitful
@@ -178,7 +191,7 @@
         </div>
         <br /><br />
         <div style="text-align: center">
-          <u>Announcements</u><br /><br />
+          <u>Announcements</u><br /><br /><br>
           <details>
             <summary>May 1, 2025 — Announcing TWA class</summary>
             <!-- <div style="text-align: left; border: 1px solid black; padding: 1em;"> -->
